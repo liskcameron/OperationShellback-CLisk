@@ -21,7 +21,7 @@ foreach($UserParam in $csv){
     }
     Try{
         New-ADUser @newUserID -ErrorAction Stop 
-        Write-Host "UserID $($UserParam.SamAccountName) created!" -ForegroundColor green
+        Write-Host "User $($UserParam.SamAccountName) created!" -ForegroundColor green
        }
     Catch{
         Write-Host "Could not create AD User $($UserParam.SamAccountName)." -ForegroundColor Red
